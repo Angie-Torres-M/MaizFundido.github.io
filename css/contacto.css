@@ -72,3 +72,27 @@ input:invalid, textarea:invalid{
   .form-grid{ grid-template-columns: 1fr; }
   .form-span-2{ grid-column: auto; }
 }
+
+
+.checkbox-promos {
+  margin-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.checkbox-promos input[type="checkbox"] {
+  margin-top: 4px;
+  transform: scale(1.2); /* hace más grande la casilla */
+  cursor: pointer;
+}
+
+.checkbox-promos label {
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
+}
+.checkbox-promos label a {
+  color: #BAD200;
+  text-decoration: underline;
+}
