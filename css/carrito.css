@@ -1,0 +1,96 @@
+   :root { --mf-gap: 16px; }
+
+    html, body { height: 100%; }
+    body {
+      /* Este padding-top se recalcula con JS según la altura real del header insertado */
+      padding-top: 0;
+      font-family: "Montserrat Alternates", system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", "Noto Sans", "Liberation Sans", sans-serif;
+      background: #fff;
+    }
+
+    main {
+      padding: 24px 16px;
+    }
+
+    main > h1 {
+      margin: 0 0 16px 0;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+
+    /* Tabla principal de “Carrito de Compras” */
+    .carrito-table {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto 24px auto;
+      border-collapse: collapse;
+    }
+    .carrito-table th,
+    .carrito-table td {
+      padding: 12px 10px;
+      border-bottom: 1px solid #e9ecef;
+      vertical-align: middle;
+    }
+    .carrito-table th {
+      font-weight: 700;
+      background: #fafafa;
+    }
+
+    /* CTA Cotizar centrada */
+    .cotizar-cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin: 16px auto 8px auto;
+      width: 100%;
+    }
+    #cotizar-btn.btn {
+      padding: 10px 24px;
+      font-weight: 700;
+      border-radius: 12px;
+    }
+
+    /* Panel de cotización / carrito (si lo usas) */
+    #cart-panel {
+      max-width: 1000px;
+      width: 100%;
+      margin: 8px auto 24px auto;
+      display: none; /* lo controlas con JS */
+    }
+    /* Ventana flotante del carrito (arrastrable) */
+.cart-float {
+  position: fixed;
+  top: 96px;                   /* se compensa con tu header fijo */
+  right: 24px;
+  width: min(420px, 92vw);
+  max-height: 72vh;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.16);
+  overflow: hidden;
+  z-index: 2100;
+  display: none;               /* el JS la muestra/oculta */
+}
+
+.cart-drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #f6f8ea;         /* tu paleta */
+  border-bottom: 1px solid #e9efb8;
+  cursor: move;
+  user-select: none;
+}
+
+.cart-panel-body { padding: 10px 12px; overflow: auto; max-height: calc(72vh - 110px); }
+.cart-panel-footer { padding: 10px 12px; border-top: 1px solid #e9efb8; background: #fff; }
+
+.cart-close { line-height: 1; font-weight: 700; }
+
+/* En móviles, que aparezca centrada */
+@media (max-width: 576px) {
+  .cart-float { left: 50%; right: auto; transform: translateX(-50%); top: 90px; width: 92vw; }
+}

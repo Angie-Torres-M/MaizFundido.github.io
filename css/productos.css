@@ -1,0 +1,357 @@
+/* Galería de productos */
+.container-galery-quienessomos {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+
+}
+
+.container-galery-quienessomos {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+/* Estilo de las imágenes en la galería */
+.container-galery-quienessomos img {
+    width: 100%;
+    /* Cambia a 100% para que ocupe toda la columna */
+    padding: 5px;
+    margin: 5px;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+
+/*inicio*/
+#masinfo button {
+    background-color: #ffffff;
+    border-color: #BAD200;
+    color: #BAD200;
+    /* Color por defecto */
+    transition: color 0.3s ease;
+    width: auto;
+
+    border-radius: 100px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    font-size: large;
+    font-weight: 500;
+}
+
+#masinfo button:hover {
+    color: #ffffff;
+    background-color: #BAD200;
+    /* Color cuando se pasa el cursor */
+    transform: scale(1.2);
+    /* Efecto hover para hacer zoom en las imágenes */
+}
+
+
+#info {
+    margin: 0px auto;
+    width: 85%;
+    background-color: #ffffff;
+    border-radius: 0px;
+    padding: 30px;
+
+}
+
+#info img {
+    padding: 25px;
+    margin: 25px;
+    border-radius: 15%;
+}
+
+#masinfo {
+    width: 100%;
+    font-size: 15px;
+    padding: 0px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    /* Alinea horizontalmente */
+    height: auto;
+    text-align: center;
+
+}
+
+/* Galería de productos */
+.container-galery-sabiasque {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0px;
+
+}
+
+.container-galery-sabiasque {
+
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+/* Estilo de las imágenes en la galería */
+.container-galery-sabiasque img {
+    width: 85%;
+    /* Cambia a 100% para que ocupe toda la columna */
+    padding: 5px;
+    margin: 5px;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+
+.bg-white {
+    margin: 20px;
+
+}
+
+
+#info button {
+    background-color: #ffffff;
+    border-color: #BAD200;
+    color: #BAD200;
+    /* Color por defecto */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: inline-block;
+    /* Asegura que el botón se comporte como un bloque inline */
+    text-align: center;
+    /* Centra el texto dentro del botón */
+
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+#info button:hover {
+    color: #ffffff;
+    background-color: #BAD200;
+    /* Color cuando se pasa el cursor */
+    transform: scale(1.2);
+    /* Efecto hover para hacer zoom en las imágenes */
+}
+
+
+
+#aretes button {
+    background-color: #738205bf;
+    border-color: #748205;
+}
+
+#aretes {
+
+
+    margin: 40px auto;
+    width: 85%;
+    background-color: #f3a1a130;
+    border-radius: 0px;
+    padding: 50px;
+
+}
+
+
+
+/* Estilo para los títulos y párrafos */
+.container-galery-productos h3,
+.container-galery-productos h4 {
+    width: 100%;
+    font-size: 20px;
+    padding: 0;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 300;
+    text-align: center;
+
+}
+
+.container-galery-productos p {
+    width: 100%;
+    font-size: 13px;
+    padding: 0;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* Galería de productos */
+.container-galery-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Ajusta el valor mínimo si es necesario */
+    gap: 20px;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+/* Estilo de las imágenes en la galería */
+.container-galery-productos img {
+    width: 100%;
+    /* Cambia a 100% para que ocupe toda la columna */
+    height: auto;
+    padding: 5px;
+    margin: 0px;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+
+.container-galery-productos {
+    img {
+        width: 100%;
+        transition: transform 0.5s ease;
+        cursor: zoom-in;
+    }
+
+    img:hover {
+        transform: scale(1.5);
+        /* Hace zoom en la imagen al pasar el mouse */
+        cursor: url(./imagenes/gafas2.png), auto;
+        /* Cambia el cursor al de lupa */
+
+
+
+
+    }
+
+
+    .box {
+        position: relative;
+        overflow: visible;
+        /* Asegúrate de que los elementos hijos puedan sobresalir */
+        z-index: 1;
+        /* Z-index bajo para permitir que los elementos hijos sobresalgan */
+        margin: 10px;
+        /* Ajusta el margen si es necesario */
+    }
+}
+
+
+
+
+#aretes button {
+    background-color: #ffffff;
+    border-color: #BAD200;
+    color: #BAD200;
+    /* Color por defecto */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#aretes button:hover {
+    color: #ffffff;
+    background-color: #BAD200;
+    /* Color cuando se pasa el cursor */
+    transform: scale(1);
+    /* Efecto hover para hacer zoom en las imágenes */
+}
+
+
+
+button svg {
+    fill: #bad200;
+    /* Cambia este color al que prefieras */
+}
+
+button:hover svg {
+    fill: #ffffff;
+    /* Cambia este color al que prefieras */
+}
+
+
+.zoom-image {
+    transition: transform 0.3s ease;
+    /* Agregar una transición suave para el zoom */
+}
+
+.indicator {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 3px;
+    transition: fill 0.3s;
+}
+
+/* Ventana flotante del carrito (arrastrable) */
+.cart-float {
+  position: fixed;
+  top: 96px;                   /* se compensa con tu header fijo */
+  right: 24px;
+  width: min(420px, 92vw);
+  max-height: 72vh;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.16);
+  overflow: hidden;
+  z-index: 2100;
+  display: none;               /* el JS la muestra/oculta */
+}
+
+.cart-drag-handle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #f6f8ea;         /* tu paleta */
+  border-bottom: 1px solid #e9efb8;
+  cursor: move;
+  user-select: none;
+}
+
+.cart-panel-body { padding: 10px 12px; overflow: auto; max-height: calc(72vh - 110px); }
+.cart-panel-footer { padding: 10px 12px; border-top: 1px solid #e9efb8; background: #fff; }
+
+.cart-close { line-height: 1; font-weight: 700; }
+
+/* En móviles, que aparezca centrada */
+@media (max-width: 576px) {
+  .cart-float { left: 50%; right: auto; transform: translateX(-50%); top: 90px; width: 92vw; }
+}
+
+
+
+
+.cart-float{
+  position: fixed;
+  top: 96px;               /* compensa el header fijo */
+  right: 24px;
+  width: min(420px, 92vw);
+  max-height: 72vh;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.16);
+  overflow: hidden;
+  z-index: 2100;
+  display: none;
+}
+.cart-drag-handle{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:8px; padding:10px 12px;
+  background:#f6f8ea; border-bottom:1px solid #e9efb8;
+  cursor: move; user-select: none;
+}
+.cart-panel-body{ padding:10px 12px; overflow:auto; max-height:calc(72vh - 110px); }
+.cart-panel-footer{ padding:10px 12px; border-top:1px solid #e9efb8; background:#fff; }
+.cart-close{ line-height:1; font-weight:700; }
+
+@media (max-width:576px){
+  .cart-float{ left:50%; right:auto; transform:translateX(-50%); top:90px; width:92vw; }
+}

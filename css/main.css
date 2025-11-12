@@ -1,0 +1,78 @@
+/* ====== Grid 3 columnas con auto ====== */
+#quienessomos {
+  display: grid;
+  grid-template-columns: auto auto auto; /* 3 columnas según el ancho de las cajas */
+  gap: 1.5rem;
+  justify-content: center;               /* centra las 3 columnas en el contenedor */
+  align-items: start;
+  padding: 2rem 1rem;
+  background: #fff;
+}
+hero-bienvenida {
+  background-color: #f9f9f9;
+  padding: 2rem 1rem;
+  text-align: center;
+ 
+}
+
+/* Tarjeta/caja de cada elemento */
+.card-qs {
+  /* define el ancho para que "auto" sea predecible */
+  width: 300px;                  /* ajusta 260–340px a tu gusto */
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card-qs:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0,0,0,.12);
+}
+
+/* Contenido de la tarjeta */
+.card-qs img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 0.9rem 1rem 1.1rem;
+  text-align: center;
+}
+.card-title {
+  margin: 0 0 .35rem;
+  font-weight: 700;
+  color: #748205;
+  font-size: 1.05rem;
+}
+.card-text {
+  margin: 0;
+  color: #444;
+  font-size: .95rem;
+}
+
+/* Título de sección ocupa fila completa */
+#quienessomos h3 {
+  grid-column: 1 / -1;
+  font-size: 1.8rem;
+  color: #748205;
+  margin-bottom: .75rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* ====== Responsivo ====== */
+/* Tablet: 2 columnas */
+@media (max-width: 992px) {
+  #quienessomos { grid-template-columns: auto auto; }
+}
+
+/* Móvil: 1 columna */
+@media (max-width: 576px) {
+  #quienessomos { grid-template-columns: auto; }
+  .card-qsc { width: 100%; max-width: 420px; } /* que respiren en móvil */
+}
