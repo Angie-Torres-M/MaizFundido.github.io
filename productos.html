@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/productos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sevillana&display=swap"
+        rel="stylesheet">
+
+
+
+
+
+    <title>Cátalogo</title>
+</head>
+
+<body>
+
+    <!-- Header (se inserta vía includes.js) -->
+    <div id="site-header"></div>
+
+    <main class="container-fluid">
+        <!-- Carrito de Compras -->
+
+        <!--carrito-->
+        <!-- ÚNICO panel -->
+        <div id="cart-panel" class="cart-float" style="display:none">
+            <div class="cart-drag-handle">
+                <strong>Tu cotización</strong>
+                <button type="button" class="btn btn-sm btn-light cart-close" aria-label="Cerrar">&times;</button>
+            </div>
+
+            <div class="cart-panel-body">
+                <table class="table table-sm mb-3">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cant.</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items"></tbody> <!-- ← solo aquí va #cart-items -->
+                </table>
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fw-semibold">Total:</span>
+                    <span class="fw-bold">$<span id="cart-total">0.00</span> MXN</span>
+                </div>
+            </div>
+
+            <div class="cart-panel-footer">
+                <a href="./carrito.html" class="btn btn-success w-100" id="go-to-cart">Ir al carrito</a>
+            </div>
+        </div>
+        <div id="cart-panel1" class="col-md-10 justify-content-end d-flex d-none d-md-block">
+            <button class="btn btn-outline-secondary" id="cart-icon">
+                <img src="./images/carrito-de-compras.png" width="50" height="50" alt="">
+                <span class="cart-count">0</span>
+            </button>
+        </div>
+
+
+
+
+        <div class=" col-md-12 col-12">
+
+
+
+            <!--tienda de productos-->
+            <main>
+                <div class="container ">
+                    <div class="container-galery-productos text-center justify-content-center  d-flex">
+                        <h1 class="my-4">Cátalogo</h1>
+                    </div>
+                    <!-- Lista de Productos -->
+
+                    <section id="aretes" id="product-list" class=" d-flex flex-wrap ">
+                        <div class="col-md-10 col-12 d-flex justify-content-center align-items-center row ">
+                            <h3>Aretes</h3>
+                            <p>Podemos personalizar los aretes que te interesen.</p>
+                        </div>
+
+                        <div class="container-galery-productos bg-white " id="carouselExampleControls-accesorios">
+
+
+
+                            <div class="main card product-card  d-flex flex-wrap">
+                                <div id="div-19" class="box card-body">
+                                    <h4 class="card-title">Mickey&Minnie</h4>
+                                    <img src="./images/aretes/confondo/caricatura_mickeyminnie.png" alt="">
+                                    <p class="card-text">90.00MXN </p><br>
+
+                                    <p>
+                                    <div id="extraContent3" style="display: none;">
+                                        Técnica:<br>
+                                        Impresión 3D <br>
+                                        Material: <br>
+                                        PLA <br>
+
+                                    </div>
+                                    </p>
+                                    <div class="row">
+                                        <button id="verMasBtn3" class="col-md-4 btn btn-primary d-block mx-auto"><svg
+                                                xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 32.5-156t88-127Q256-817 330-848.5T488-880q80 0 151 27.5t124.5 76q53.5 48.5 85 115T880-518q0 115-70 176.5T640-280h-74q-9 0-12.5 5t-3.5 11q0 12 15 34.5t15 51.5q0 50-27.5 74T480-80Zm0-400Zm-220 40q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120-160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm200 0q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120 160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17ZM480-160q9 0 14.5-5t5.5-13q0-14-15-33t-15-57q0-42 29-67t71-25h70q66 0 113-38.5T800-518q0-121-92.5-201.5T488-800q-136 0-232 93t-96 227q0 133 93.5 226.5T480-160Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary add-to-cart" data-id="3"
+                                            data-name="Micky y Minnie" data-price="90">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="main card product-card d-flex flex-wrap">
+                                <div id="div-19" class="box card-body">
+                                    <h4 class="card-title">Snoopy</h4>
+                                    <img src="./images/aretes/confondo/caricatura_snoopy.png" alt="">
+                                    <p class="card-text">$90.00MXN </p><br>
+
+                                    <p>
+                                    <div id="extraContent4" style="display: none;">
+                                        Técnica:<br>
+                                        Impresión 3D <br>
+                                        Material: <br>
+                                        PLA <br>
+
+                                    </div>
+                                    </p>
+                                    <div class="row">
+                                        <button id="verMasBtn4" class="col-md-4 btn btn-primary d-block mx-auto"><svg
+                                                xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+                                            </svg>
+                                        </button>
+
+
+                                        <button class="col-md-4 btn btn-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 32.5-156t88-127Q256-817 330-848.5T488-880q80 0 151 27.5t124.5 76q53.5 48.5 85 115T880-518q0 115-70 176.5T640-280h-74q-9 0-12.5 5t-3.5 11q0 12 15 34.5t15 51.5q0 50-27.5 74T480-80Zm0-400Zm-220 40q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120-160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm200 0q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120 160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17ZM480-160q9 0 14.5-5t5.5-13q0-14-15-33t-15-57q0-42 29-67t71-25h70q66 0 113-38.5T800-518q0-121-92.5-201.5T488-800q-136 0-232 93t-96 227q0 133 93.5 226.5T480-160Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary add-to-cart" data-id="4"
+                                            data-name="Snoopy" data-price="90">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                            <div class="main card product-card  d-flex flex-wrap">
+                                <div id="div-19" class="box card-body">
+                                    <h4 class="card-title">Cheems Navideño</h4>
+                                    <img src="./images/aretes/confondo/cheemsnavidad.png" alt="">
+                                    <p class="card-text">90.00MXN </p><br>
+
+                                    <p>
+                                    <div id="extraContent5" style="display: none;">
+                                        Técnica:<br>
+                                        Impresión 3D <br>
+                                        Material: <br>
+                                        PLA <br>
+
+                                    </div>
+                                    </p>
+                                    <div class="row">
+                                        <button id="verMasBtn5" class="col-md-4 btn btn-primary d-block mx-auto"><svg
+                                                xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 32.5-156t88-127Q256-817 330-848.5T488-880q80 0 151 27.5t124.5 76q53.5 48.5 85 115T880-518q0 115-70 176.5T640-280h-74q-9 0-12.5 5t-3.5 11q0 12 15 34.5t15 51.5q0 50-27.5 74T480-80Zm0-400Zm-220 40q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120-160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm200 0q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120 160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17ZM480-160q9 0 14.5-5t5.5-13q0-14-15-33t-15-57q0-42 29-67t71-25h70q66 0 113-38.5T800-518q0-121-92.5-201.5T488-800q-136 0-232 93t-96 227q0 133 93.5 226.5T480-160Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary add-to-cart" data-id="5"
+                                            data-name="Cheems Navideño" data-price="90">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="main card product-card d-flex flex-wrap">
+                                <div id="div-19" class="box card-body">
+                                    <h4 class="card-title">Chefsito</h4>
+                                    <img src=".//images/aretes/confondo/disney_chefsito.png" alt="">
+                                    <p class="card-text">$90.00MXN </p><br>
+
+                                    <p>
+                                    <div id="extraContent6" style="display: none;">
+                                        Técnica:<br>
+                                        Impresión 3D <br>
+                                        Material: <br>
+                                        PLA <br>
+
+                                    </div>
+                                    </p>
+                                    <div class="row">
+                                        <button id="verMasBtn6" class="col-md-4 btn btn-primary d-block mx-auto"><svg
+                                                xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 32.5-156t88-127Q256-817 330-848.5T488-880q80 0 151 27.5t124.5 76q53.5 48.5 85 115T880-518q0 115-70 176.5T640-280h-74q-9 0-12.5 5t-3.5 11q0 12 15 34.5t15 51.5q0 50-27.5 74T480-80Zm0-400Zm-220 40q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120-160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm200 0q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120 160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17ZM480-160q9 0 14.5-5t5.5-13q0-14-15-33t-15-57q0-42 29-67t71-25h70q66 0 113-38.5T800-518q0-121-92.5-201.5T488-800q-136 0-232 93t-96 227q0 133 93.5 226.5T480-160Z" />
+                                            </svg>
+                                        </button>
+
+
+                                        <button class="col-md-4 btn btn-primary add-to-cart" data-id="6"
+                                            data-name="Chefsito" data-price="90">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="main card product-card d-flex flex-wrap">
+                                <div id="div-19" class="box card-body">
+                                    <h4 class="card-title">Chips & Pots</h4>
+                                    <img src="./images/aretes/confondo/disney_chipspots.png" alt="">
+                                    <p class="card-text">90.00MXN </p><br>
+
+                                    <p>
+                                    <div id="extraContent7" style="display: none;">
+                                        Técnica:<br>
+                                        Impresión 3D <br>
+                                        Material: <br>
+                                        PLA <br>
+
+                                    </div>
+                                    </p>
+                                    <div class="row">
+                                        <button id="verMasBtn7" class="col-md-4 btn btn-primary d-block mx-auto"><svg
+                                                xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 32.5-156t88-127Q256-817 330-848.5T488-880q80 0 151 27.5t124.5 76q53.5 48.5 85 115T880-518q0 115-70 176.5T640-280h-74q-9 0-12.5 5t-3.5 11q0 12 15 34.5t15 51.5q0 50-27.5 74T480-80Zm0-400Zm-220 40q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120-160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm200 0q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120 160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17ZM480-160q9 0 14.5-5t5.5-13q0-14-15-33t-15-57q0-42 29-67t71-25h70q66 0 113-38.5T800-518q0-121-92.5-201.5T488-800q-136 0-232 93t-96 227q0 133 93.5 226.5T480-160Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary add-to-cart" data-id="7"
+                                            data-name="Chips&Pots" data-price="90">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="main card product-card  d-flex flex-wrap">
+                                <div id="div-19" class="box card-body">
+                                    <h4 class="card-title">Ditto/Gengar</h4>
+                                    <img src="./images/aretes/confondo/dittogengar.png" alt="">
+                                    <p class="card-text">$90.00MXN </p><br>
+
+                                    <p>
+                                    <div id="extraContent8" style="display: none;">
+                                        Técnica:<br>
+                                        Impresión 3D <br>
+                                        Material: <br>
+                                        PLA <br>
+
+                                    </div>
+                                    </p>
+                                    <div class="row">
+                                        <button id="verMasBtn8" class="col-md-4 btn btn-primary d-block mx-auto"><svg
+                                                xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+                                            </svg>
+                                        </button>
+
+
+                                        <button class="col-md-4 btn btn-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 32.5-156t88-127Q256-817 330-848.5T488-880q80 0 151 27.5t124.5 76q53.5 48.5 85 115T880-518q0 115-70 176.5T640-280h-74q-9 0-12.5 5t-3.5 11q0 12 15 34.5t15 51.5q0 50-27.5 74T480-80Zm0-400Zm-220 40q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120-160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm200 0q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120 160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17ZM480-160q9 0 14.5-5t5.5-13q0-14-15-33t-15-57q0-42 29-67t71-25h70q66 0 113-38.5T800-518q0-121-92.5-201.5T488-800q-136 0-232 93t-96 227q0 133 93.5 226.5T480-160Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary add-to-cart" data-id="8"
+                                            data-name="Ditto/Gengar" data-price="90">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="main card product-card d-flex flex-wrap">
+                                <div id="div-19" class="box card-body">
+                                    <h4 class="card-title">Cerezo</h4>
+                                    <img src="./images/aretes/confondo/flor_cerezo.png" alt="">
+                                    <p class="card-text">90.00MXN </p><br>
+
+                                    <p>
+                                    <div id="extraContent9" style="display: none;">
+                                        Técnica:<br>
+                                        Impresión 3D <br>
+                                        Material: <br>
+                                        PLA <br>
+
+                                    </div>
+                                    </p>
+                                    <div class="row">
+                                        <button id="verMasBtn9" class="col-md-4 btn btn-primary d-block mx-auto"><svg
+                                                xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 32.5-156t88-127Q256-817 330-848.5T488-880q80 0 151 27.5t124.5 76q53.5 48.5 85 115T880-518q0 115-70 176.5T640-280h-74q-9 0-12.5 5t-3.5 11q0 12 15 34.5t15 51.5q0 50-27.5 74T480-80Zm0-400Zm-220 40q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120-160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm200 0q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120 160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17ZM480-160q9 0 14.5-5t5.5-13q0-14-15-33t-15-57q0-42 29-67t71-25h70q66 0 113-38.5T800-518q0-121-92.5-201.5T488-800q-136 0-232 93t-96 227q0 133 93.5 226.5T480-160Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary add-to-cart" data-id="1"
+                                            data-name="Cerezo" data-price="90">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="main card  product-card  d-flex flex-wrap">
+                                <div id="div-19" class="box card-body">
+                                    <h4 class="card-title">Jacaranda</h4>
+                                    <img src=".//images/aretes/confondo/flor_jacaranda.png" alt="">
+                                    <p class="card-text">$90.00MXN </p><br>
+
+                                    <p>
+                                    <div id="extraContent10" style="display: none;">
+                                        Técnica:<br>
+                                        Impresión 3D <br>
+                                        Material: <br>
+                                        PLA <br>
+
+                                    </div>
+                                    </p>
+                                    <div class="row">
+                                        <button id="verMasBtn10" class="col-md-4 btn btn-primary d-block mx-auto"><svg
+                                                xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 32.5-156t88-127Q256-817 330-848.5T488-880q80 0 151 27.5t124.5 76q53.5 48.5 85 115T880-518q0 115-70 176.5T640-280h-74q-9 0-12.5 5t-3.5 11q0 12 15 34.5t15 51.5q0 50-27.5 74T480-80Zm0-400Zm-220 40q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120-160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm200 0q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120 160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17ZM480-160q9 0 14.5-5t5.5-13q0-14-15-33t-15-57q0-42 29-67t71-25h70q66 0 113-38.5T800-518q0-121-92.5-201.5T488-800q-136 0-232 93t-96 227q0 133 93.5 226.5T480-160Z" />
+                                            </svg>
+                                        </button>
+
+
+                                        <button class="col-md-4 btn btn-primary add-to-cart" data-id="2"
+                                            data-name="Jacaranda" data-price="90">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="main card product-card  d-flex flex-wrap">
+                                <div id="div-19" class="box card-body">
+                                    <h4 class="card-title">Calcifer</h4>
+                                    <img src="./images/aretes/confondo/ghibli_calcifer.png" alt="">
+                                    <p class="card-text">90.00MXN </p><br>
+
+                                    <p>
+                                    <div id="extraContent11" style="display: none;">
+                                        Técnica:<br>
+                                        Impresión 3D <br>
+                                        Material: <br>
+                                        PLA <br>
+
+                                    </div>
+                                    </p>
+                                    <div class="row">
+                                        <button id="verMasBtn11" class="col-md-4 btn btn-primary d-block mx-auto"><svg
+                                                xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 32.5-156t88-127Q256-817 330-848.5T488-880q80 0 151 27.5t124.5 76q53.5 48.5 85 115T880-518q0 115-70 176.5T640-280h-74q-9 0-12.5 5t-3.5 11q0 12 15 34.5t15 51.5q0 50-27.5 74T480-80Zm0-400Zm-220 40q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120-160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm200 0q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120 160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17ZM480-160q9 0 14.5-5t5.5-13q0-14-15-33t-15-57q0-42 29-67t71-25h70q66 0 113-38.5T800-518q0-121-92.5-201.5T488-800q-136 0-232 93t-96 227q0 133 93.5 226.5T480-160Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary add-to-cart" data-id="3"
+                                            data-name="Calcifer" data-price="90">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="main card product-card d-flex flex-wrap">
+                                <div id="div-19" class="box card-body">
+                                    <h4 class="card-title">Monstera</h4>
+                                    <img src="./images/aretes/confondo/hoja_monstera.png" alt="">
+                                    <p class="card-text">$90.00MXN </p><br>
+
+                                    <p>
+                                    <div id="extraContent12" style="display: none;">
+                                        Técnica:<br>
+                                        Impresión 3D <br>
+                                        Material: <br>
+                                        PLA <br>
+
+                                    </div>
+                                    </p>
+                                    <div class="row">
+                                        <button id="verMasBtn12" class="col-md-4 btn btn-primary d-block mx-auto"><svg
+                                                xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+                                            </svg>
+                                        </button>
+
+
+                                        <button class="col-md-4 btn btn-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 32.5-156t88-127Q256-817 330-848.5T488-880q80 0 151 27.5t124.5 76q53.5 48.5 85 115T880-518q0 115-70 176.5T640-280h-74q-9 0-12.5 5t-3.5 11q0 12 15 34.5t15 51.5q0 50-27.5 74T480-80Zm0-400Zm-220 40q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120-160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm200 0q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120 160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17ZM480-160q9 0 14.5-5t5.5-13q0-14-15-33t-15-57q0-42 29-67t71-25h70q66 0 113-38.5T800-518q0-121-92.5-201.5T488-800q-136 0-232 93t-96 227q0 133 93.5 226.5T480-160Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary add-to-cart" data-id="4"
+                                            data-name="Monstera" data-price="90">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="main card product-card d-flex flex-wrap">
+                                <div id="div-19" class="box card-body">
+                                    <h4 class="card-title">Chips & Pots</h4>
+                                    <img src="./images/aretes/confondo/disney_chipspots.png" alt="">
+                                    <p class="card-text">90.00MXN </p><br>
+
+                                    <p>
+                                    <div id="extraContent15" style="display: none;">
+                                        Técnica:<br>
+                                        Impresión 3D <br>
+                                        Material: <br>
+                                        PLA <br>
+
+                                    </div>
+                                    </p>
+                                    <div class="row">
+                                        <button id="verMasBtn15" class="col-md-4 btn btn-primary d-block mx-auto"><svg
+                                                xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 32.5-156t88-127Q256-817 330-848.5T488-880q80 0 151 27.5t124.5 76q53.5 48.5 85 115T880-518q0 115-70 176.5T640-280h-74q-9 0-12.5 5t-3.5 11q0 12 15 34.5t15 51.5q0 50-27.5 74T480-80Zm0-400Zm-220 40q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120-160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm200 0q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120 160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17ZM480-160q9 0 14.5-5t5.5-13q0-14-15-33t-15-57q0-42 29-67t71-25h70q66 0 113-38.5T800-518q0-121-92.5-201.5T488-800q-136 0-232 93t-96 227q0 133 93.5 226.5T480-160Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary add-to-cart" data-id="7"
+                                            data-name="Chips&Pots" data-price="90">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="main card product-card  d-flex flex-wrap">
+                                <div id="div-19" class="box card-body">
+                                    <h4 class="card-title">Ditto/Gengar</h4>
+                                    <img src="./images/aretes/confondo/dittogengar.png" alt="">
+                                    <p class="card-text">$90.00MXN </p><br>
+
+                                    <p>
+                                    <div id="extraContent16" style="display: none;">
+                                        Técnica:<br>
+                                        Impresión 3D <br>
+                                        Material: <br>
+                                        PLA <br>
+
+                                    </div>
+                                    </p>
+                                    <div class="row">
+                                        <button id="verMasBtn16" class="col-md-4 btn btn-primary d-block mx-auto"><svg
+                                                xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+                                            </svg>
+                                        </button>
+
+
+                                        <button class="col-md-4 btn btn-primary">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 32.5-156t88-127Q256-817 330-848.5T488-880q80 0 151 27.5t124.5 76q53.5 48.5 85 115T880-518q0 115-70 176.5T640-280h-74q-9 0-12.5 5t-3.5 11q0 12 15 34.5t15 51.5q0 50-27.5 74T480-80Zm0-400Zm-220 40q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120-160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm200 0q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm120 160q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17ZM480-160q9 0 14.5-5t5.5-13q0-14-15-33t-15-57q0-42 29-67t71-25h70q66 0 113-38.5T800-518q0-121-92.5-201.5T488-800q-136 0-232 93t-96 227q0 133 93.5 226.5T480-160Z" />
+                                            </svg>
+                                        </button>
+
+
+
+                                        <button class="col-md-4 btn btn-primary add-to-cart" data-id="8"
+                                            data-name="Ditto/Gengar" data-price="90">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                                viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                                                <path
+                                                    d="M440-600v-120H320v-80h120v-120h80v120h120v80H520v120h-80ZM280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z" />
+                                            </svg>
+                                        </button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+                    </section>
+                </div>
+            </main>
+
+            <div class="col-md-12 ">
+                <div class="col-md-12 justify-content-center align-items-center">
+                    <!--linea divisora-->
+
+                    <hr class="divider mb-2">
+
+                </div>
+            </div>
+
+
+    </main>
+
+    <!-- Footer Bottom -->
+    <!-- Footer (se inserta vía includes.js) -->
+    <div id="site-footer"></div>
+
+    <!-- Ajuste dinámico: compensa exactamente la altura del header insertado -->
+
+
+    <!-- Tus scripts (los dos que tenías) -->
+    <script type="module" src="./js/includes.js"></script>
+    <script type="module" src="./js/carrito.js"></script>
+    <script type="module" src="./js/productos.js"></script>
+    </div>
+
+
+    <!-- Bootstrap JS y dependencias (Popper.js y jQuery) -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+
+
+</html>

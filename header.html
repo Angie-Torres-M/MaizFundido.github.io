@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header | Maíz Fundido</title>
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="/css/header.css">
+  <!-- Bootstrap solo para colapsar el menú (JS) y estilos base -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Iconos -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./images/logomaizfundidosf.png">
+</head>
+
+<body>
+  <!-- role="banner": bloque superior de la página -->
+  <header class="header header-fijo fixed-top" role="banner" aria-label="Encabezado del sitio">
+    <!-- Franja de promoción -->
+    <p class="promocion m-0 text-center">
+      ¡Envíos gratis a todo México en compras mayores a $1500.00 MXN!
+    </p>
+
+    <!-- ========= DESKTOP / TABLET GRANDE ========= -->
+    <!-- Mantén tu bloque de escritorio tal cual; solo envuélvelo en .header-desktop -->
+    <div class="header-desktop d-none d-md-block">
+      <div class="header-wrap">
+        <div class="header-container">
+          <!-- Logo: el link ya es suficiente; aria-label describe la acción -->
+          <div class="logo">
+            <a href="index.html" class="inicio" aria-label="Ir al inicio">
+              <img src="./images/logomaizfundido2en1largo.png" alt="Maíz Fundido" width="350">
+            </a>
+          </div>
+
+          <!-- Buscador -->
+          <!-- form: agrupa controles para envío; role="search" indica propósito semántico -->
+          <div class="buscador">
+            <form class="buscar" role="search" aria-label="Buscador del sitio">
+              <!-- type="search": input optimizado; name= q para que el backend reciba el término -->
+              <input type="search" name="q" placeholder="Buscar en Maíz Fundido" aria-label="Término de búsqueda">
+              <!-- button type=submit: envía el form; aria-label explica el botón si solo hay icono -->
+              <button type="submit" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Menú principal -->
+          <!-- nav: región de navegación; aria-label describe el menú -->
+          <nav class="menu" aria-label="Menú principal">
+            <ul>
+              <li class="dropdown">
+                <a href="index.html">INICIO</a>
+                <ul class="dropdown-menu">
+                  <li><a href="index.html#quienessomos">¿Quiénes somos?</a></li>
+                  <li><a href="index.html#productosdestacado">Productos destacados</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="./productos.html">CATÁLOGO</a>
+                <ul class="dropdown-menu">
+                  <li><a href="productos.html#aretes">Aretes</a></li>
+                  <li><a href="productos.html#pines">Pines</a></li>
+                  <li><a href="productos.html#llaveros">Llaveros</a></li>
+                  <li><a href="productos.html#accesoriosns">Docks&Stands</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="./comprar.html">PUNTOS DE VENTA</a>
+                <ul class="dropdown-menu">
+                  <li><a href="comprar.html#lilimi">LibreLiebre</a></li>
+                  <li><a href="comprar.html#redes">Redes sociales</a></li>
+                </ul>
+              </li>
+
+              <li><a href="./contacto.html">CONTÁCTANOS</a></li>
+              <li><a href="./reseñas.html">RESEÑAS</a></li>
+              <li><a href="./preguntas.html">PREGUNTAS</a></li>
+              <li>
+                <a href="./carrito.html" aria-label="Ver carrito de compras">
+                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Redes -->
+          <div class="redes" aria-label="Redes sociales">
+            <ul>
+              <li><a target="_blank" href="https://www.instagram.com/maiz_fundido/" aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a target="_blank" href="https://www.facebook.com/MaizFundidoo/?locale=es_LA" aria-label="Facebook">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a target="_blank" href="https://www.tiktok.com/@maiz_fundido" aria-label="TikTok">
+                <i class="fa-brands fa-tiktok" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="divider">
+      </div>
+    </div>
+
+    <!-- ========= MÓVIL / TABLET CHICA ========= -->
+    <!-- Importante: SOLO un colapsable con id único (nav-movil) -->
+    <div class="header-mobile d-block d-md-none bg-white">
+      <div class="mobile-wrap">
+        <!-- Fila superior: logo + redes -->
+        <div class="mobile-top">
+          <a href="index.html" aria-label="Ir al inicio" class="mobile-logo">
+            <img src="./images/logomaizfundido2en1largo.png" alt="Maíz Fundido">
+          </a>
+          <div class="mobile-socials" aria-label="Redes sociales">
+            <a target="_blank" href="https://www.instagram.com/maiz_fundido/" aria-label="Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a target="_blank" href="https://www.facebook.com/MaizFundidoo/?locale=es_LA" aria-label="Facebook">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+            <a target="_blank" href="https://www.tiktok.com/@maiz_fundido" aria-label="TikTok">
+              <i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Barra compacta: hamburguesa + buscador + carrito -->
+        <div class="mobile-bar">
+          <!-- Botón: aria-controls enlaza con el id del colapsable; aria-expanded lo maneja Bootstrap -->
+          <button class="navbar-toggler" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#nav-movil"
+                  aria-controls="nav-movil" aria-expanded="false"
+                  aria-label="Abrir menú de navegación">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Buscador móvil: mismo rol y propósito que en desktop -->
+          <form class="mobile-search" role="search" aria-label="Buscador del sitio (móvil)">
+            <input type="search" name="q" placeholder="Buscar" aria-label="Término de búsqueda">
+            <button type="submit" aria-label="Buscar">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </button>
+          </form>
+
+          <!-- Carrito con contador -->
+          <a href="./carrito.html" aria-label="Ir al carrito" class="mobile-cart">
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <span class="cart-count" aria-label="Productos en carrito">0</span>
+          </a>
+        </div>
+
+        <!-- ÚNICO menú colapsable en móvil -->
+        <nav class="navbar bg-white mobile-nav" aria-label="Navegación móvil">
+          <div class="collapse navbar-collapse" id="nav-movil">
+            <ul class="navbar-nav w-100">
+              <!-- INICIO -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navInicioMovil" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                  INICIO
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navInicioMovil">
+                  <li><a class="dropdown-item" href="index.html#quienessomos">¿Quiénes somos?</a></li>
+                  <li><a class="dropdown-item" href="index.html#productosdestacado">Productos destacados</a></li>
+                </ul>
+              </li>
+
+              <!-- CATÁLOGO -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navCatalogoMovil" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                  CATÁLOGO
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navCatalogoMovil">
+                  <li><a class="dropdown-item" href="productos.html#aretes">Aretes</a></li>
+                  <li><a class="dropdown-item" href="productos.html#pines">Pines</a></li>
+                  <li><a class="dropdown-item" href="productos.html#llaveros">Llaveros</a></li>
+                  <li><a class="dropdown-item" href="productos.html#accesoriosns">Docks & Stands</a></li>
+                </ul>
+              </li>
+
+              <!-- PUNTOS DE VENTA -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navVentaMovil" role="button"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                  PUNTOS DE VENTA
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navVentaMovil">
+                  <li><a class="dropdown-item" href="comprar.html#lilimi">LibreLiebre</a></li>
+                  <li><a class="dropdown-item" href="comprar.html#redes">Redes sociales</a></li>
+                </ul>
+              </li>
+
+              <!-- Enlaces simples -->
+              <li class="nav-item"><a class="nav-link" href="./contacto.html">CONTÁCTANOS</a></li>
+              <li class="nav-item"><a class="nav-link" href="./reseñas.html">RESEÑAS</a></li>
+              <li class="nav-item"><a class="nav-link" href="./preguntas.html">PREGUNTAS</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Línea divisoria del header (si la ves “doble”, revisa márgenes/paddings en CSS) -->
+      <hr class="divider m-0">
+    </div>
+  </header>
+
+  
+  <!-- scripts -->
+  <script type="module" src="/js/includes.js"></script>
+  <script type="module" src="/js/productos.js"></script>
+  <script type="module" src="/js/carrito.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

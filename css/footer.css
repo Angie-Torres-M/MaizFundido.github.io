@@ -1,0 +1,166 @@
+    
+    /* ====== FOOTER ====== */
+
+    /* ===============================
+   FOOTER Maíz Fundido
+   =============================== */
+.site-footer {
+  background-color: #fafafa;
+  color: var(--color-dark);
+  border-top: 1px solid var(--color-border);
+  font-size: 0.95rem;
+}
+
+/* Línea superior decorativa */
+.footer-topline {
+  height: 5px;
+  background-color: var(--color-primary);
+}
+
+/* Título */
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: var(--s-2);
+  color: var(--color-primary);
+}
+
+/* Email */
+.footer-email {
+  color: var(--color-dark);
+}
+.footer-email a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+.footer-email a:hover {
+  text-decoration: underline;
+}
+
+/* Logo */
+.footer-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Redes */
+.redes ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.redes a {
+  color: var(--color-dark);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.redes a:hover {
+  color: var(--color-primary);
+}
+
+/* Franja inferior */
+.footer-bottom {
+  background-color: #eaeaea;
+  padding: var(--s-2) 0;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+/* RESPONSIVO */
+@media (min-width: var(--bp-md)) {
+  .text-md-left {
+    text-align: left;
+  }
+  .text-md-right {
+    text-align: right;
+  }
+}
+
+.site-footer {
+  background: #ffffff;
+  color: #222;
+  font-family: "Montserrat Alternates", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Línea superior verde claro */
+.footer-topline {
+  height: 6px;
+  background: #e9efb8;         /* igual que el header */
+}
+
+/* Logo */
+.footer-logo {
+  max-width: 220px;
+  height: auto;
+}
+
+/* Títulos de columnas (Contáctanos / Síguenos) */
+.footer-title {
+  color: #6f7f10;
+  font-weight: 700;
+  margin: 0 0 .35rem 0;
+}
+
+/* Email */
+.footer-email {
+  font-weight: 500;
+  color: #2a2a2a;
+}
+.footer-email i {
+  margin-right: .4rem;
+}
+.footer-email a {
+  color: #2a2a2a;
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+  transition: color .2s ease, border-color .2s ease;
+}
+.footer-email a:hover {
+  color: #4f5a04;
+  border-color: #c7cf7a;
+}
+
+/* Redes */
+.footer-redes {
+  display: inline-flex;
+  gap: .75rem;
+  list-style: none;
+  margin: .25rem 0 0 0;
+  padding: 0;
+}
+.footer-redes a {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  background: #fff;
+  box-shadow: 0 0 0 2px #e9efb8 inset;  /* aro suave */
+  transition: transform .15s ease, background-color .2s ease, color .2s ease;
+}
+.footer-redes a:hover {
+  background: #748205;
+  color: #fff;
+  transform: translateY(-1px);
+}
+.footer-redes i { font-size: 1.25rem; line-height: 1; }
+
+/* Franja gris inferior */
+.footer-bottom {
+  background: #d9d9d9;
+  padding: 12px 0;
+  color: #2a2a2a;
+}
+
+/* Responsive */
+@media (max-width: 575.98px) {
+  .footer-logo { max-width: 180px; }
+}
+
+
