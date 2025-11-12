@@ -94,3 +94,4 @@
 @media (max-width: 576px) {
   .cart-float { left: 50%; right: auto; transform: translateX(-50%); top: 90px; width: 92vw; }
 }
+
